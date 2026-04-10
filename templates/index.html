@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="quiz-card">
+
+        <div class="header">
+            <h1>🧠 Quiz Master</h1>
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </div>
+
+        <div id="start-screen">
+            <p class="start-text">Ready to test your coding knowledge?</p>
+            <button id="start-btn">Get Started</button>
+        </div>
+
+        <div id="quiz" class="hide">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <p id="progress">Question 1 of 5</p>
+
+            <h2 id="question">Loading question...</h2>
+
+            <div class="options">
+                <button class="option"></button>
+                <button class="option"></button>
+                <button class="option"></button>
+                <button class="option"></button>
+            </div>
+
+            <div id="feedback" class="hide">
+                <p id="feedback-text"></p>
+                <button id="show-explanation">Show Explanation 📖</button>
+                <div id="explanation" class="hide"></div>
+            </div>
+
+            <button id="next">Next Question ➡️</button>
+        </div>
+
+        <h2 id="result" class="hide"></h2>
+        <button id="restart" class="hide">Restart 🔄</button>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
