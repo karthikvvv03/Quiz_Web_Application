@@ -85,3 +85,4 @@ Then open `http://127.0.0.1:5000` in your browser.
 - This app uses in-memory user storage for demonstration only; user accounts are lost when the app restarts.
 - The secret key in `app.py` is for development only and should be changed for production use.
 - For production, replace the in-memory `users` dictionary with a persistent database and handle session storage securely.
+"# Quiz_Web_Application" 
